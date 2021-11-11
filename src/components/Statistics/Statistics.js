@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import renderStatistics from '../renderStatictics/renderStatistics';
 
 export default function Statistics({
   options,
@@ -18,12 +19,4 @@ Statistics.propTypes = {
   options: PropTypes.object.isRequired,
   total: PropTypes.number.isRequired,
   positivePercentage: PropTypes.number.isRequired,
-};
-
-const renderStatistics = function (options) {
-  return Object.keys(options).map(key => (
-    <p key={key}>
-      {key}: {options[key]}
-    </p>
-  ));
 };

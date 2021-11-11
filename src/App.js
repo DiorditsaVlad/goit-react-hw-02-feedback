@@ -5,10 +5,16 @@ import Statistics from './components/Statistics/Statistics';
 import Notification from './components/Notification/Notification';
 
 export default class App extends Component {
-  state = {
+  static defaultProps = {
     good: 0,
     neutral: 0,
     bad: 0,
+  };
+
+  state = {
+    good: this.props.good,
+    neutral: this.props.neutral,
+    bad: this.props.bad,
   };
 
   addFeedback = type => {
